@@ -1,0 +1,77 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="26dp"
+    android:paddingRight="26dp"
+    android:paddingTop="26dp"
+    android:paddingBottom="26dp"
+    android:background="@color/primary"
+    android:orientation="vertical"
+
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo_uniajc"
+        android:layout_gravity="center_horizontal"/>
+    <RelativeLayout
+        android:layout_marginTop="@dimen/abc_action_bar_default_height_material"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/edtTxtUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre de Usuario"
+            android:gravity="center_horizontal"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/edtTxtUserName"
+            android:layout_alignBottom="@id/edtTxtUserName"
+            android:background="@color/primary"
+            android:src="@drawable/clear_mark"/>
+
+        <EditText
+            android:id="@+id/edtTxtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/edtTxtUserName"
+            android:hint="Contraseña"
+            android:gravity="center_horizontal"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/edtTxtPassword"
+            android:layout_alignBottom="@id/edtTxtPassword"
+            android:background="@color/primary"
+            android:src="@drawable/view_mark"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_below="@id/edtTxtPassword"
+            android:background="@drawable/button"
+            android:text="Iniciar Sesión"
+            android:textColor="#ffffff"
+            android:elevation="10dp"/>
+    </RelativeLayout>
+
+
+</LinearLayout>
+
+
+
+
+
