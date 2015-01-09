@@ -37,7 +37,8 @@
             android:layout_alignTop="@id/edtTxtUserName"
             android:layout_alignBottom="@id/edtTxtUserName"
             android:background="@color/primary"
-            android:src="@drawable/clear_mark"/>
+            android:src="@drawable/clear_mark"
+            android:onClick="eraseUsername"/>
 
         <EditText
             android:id="@+id/edtTxtPassword"
