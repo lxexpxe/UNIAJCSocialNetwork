@@ -56,7 +56,8 @@
             android:layout_alignTop="@id/edtTxtPassword"
             android:layout_alignBottom="@id/edtTxtPassword"
             android:background="@color/primary"
-            android:src="@drawable/view_mark"/>
+            android:src="@drawable/view_mark"
+            android:onClick="viewPassword"/>
 
         <Button
             android:layout_width="match_parent"

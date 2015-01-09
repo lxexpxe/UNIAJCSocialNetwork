@@ -2,21 +2,25 @@ package com.lepe.xxxlepexxx.myapplication;
 
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 
 public class MainActivity extends FragmentActivity {
 
-    EditText edtTxtUsername;
+    EditText edtTxtUsername, edtPassword;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        edtPassword = (EditText) findViewById(R.id.edtTxtPassword);
+        edtPassword.setInputType(InputType.TYPE_CLASS_TEXT| InputType.TYPE_TEXT_VARIATION_PASSWORD);
     }
 
 
@@ -30,6 +34,15 @@ public class MainActivity extends FragmentActivity {
     public void eraseUsername(View v){
         edtTxtUsername = (EditText) findViewById(R.id.edtTxtUserName);
         edtTxtUsername.setText("");
+    }
+
+    public void viewPassword(View v){
+        if(edtPassword.getInputType()== (InputType.TYPE_CLASS_TEXT|InputType.TYPE_TEXT_VARIATION_PASSWORD)){
+            edtPassword.setInputType(InputType.TYPE_CLASS_TEXT|InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+        }
+        else{
+            edtPassword.setInputType(InputType.TYPE_CLASS_TEXT|InputType.TYPE_TEXT_VARIATION_PASSWORD);
+        }
     }
 
     @Override
